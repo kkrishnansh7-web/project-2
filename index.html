@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Cards | Handmade with Love</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <img src="logo-krish.jpg" alt="Logo" class="nav-logo" />
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#occasions">Occasions</a></li>
+        <li><a href="#order" class="nav-order-btn">Order a card</a></li>
+      </ul>
+      <button class="burger" id="burger" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#order">Order a card</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">hi there</p>
+      <h1>Handmade cards<br>for the people<br>you actually care about.</h1>
+      <p class="hero-desc">I'm a college student from Delhi making gift cards entirely by hand—no printers, just paper and heart.</p>
+      <a href="#order" class="btn-main">Get your card made →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="card-stack">
+        <div class="mock-card mc-back">
+          <span class="mc-hand">Happy Birthday!</span>
+        </div>
+        <div class="mock-card mc-front">
+          <img src="logo-krish.jpg" alt="Logo" class="mock-logo" />
+          <p class="mock-note">"Made just for you"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="order-wrap">
+        <div class="order-left">
+          <h2>Let's make your card.</h2>
+          <p>Starting at <strong>₹80</strong>. Confirmation before you pay.</p>
+          <div class="contact-links">
+            <a href="https://wa.me" target="_blank">WhatsApp Me</a>
+          </div>
+        </div>
+        <div class="order-right">
+          <form id="orderForm">
+            <div class="field">
+              <label>Your Name</label>
+              <input type="text" placeholder="e.g. Sneha" required />
+            </div>
+            <div class="field">
+              <label>Occasion</label>
+              <select required>
+                <option value="">Select Occasion</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Farewell</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-main">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMobile');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
